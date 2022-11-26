@@ -25,7 +25,7 @@
                         <div class="error-content m-0">
                             <h3><i class="fas fa-exclamation-triangle text-purple"></i> Oops! Page not found.</h3>
                             <p class="m-0">
-                                Meanwhile, you may <a href="<?= base_url() ?>" class="btn-gradient">return to index</a>
+                                <a href="javascript:window:history.go(-1);" class="btn-gradient">return to index</a>
                             </p>
                         </div>
                     </div>

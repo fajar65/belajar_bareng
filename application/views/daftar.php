@@ -44,31 +44,35 @@
                     <div class="row">
                         <div class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 end-0 text-center justify-content-center flex-column">
                             <div class="position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden bg-login" style="background-image: url('assets/img/auth/img-login.jpg'); background-size: cover;">
-                                <!-- <img src="<?= base_url('assets/img/auth/img-login.jpg') ?>" alt=""> -->
-                                <span class="mask bg-gradient-primary opacity-4"></span>
-                                <h4 class="mt-5 text-white font-weight-bolder position-relative">"Attention is the new currency"</h4>
-                                <p class="text-white position-relative">The more effortless the writing looks, the more effort the writer actually put into the process.</p>
+                                <span class="mask bg-gradient-primary opacity-4">
+                                    <img class="img-fluid bg-cover" src="<?= base_url('assets/img/auth/img_login.jpg') ?>" alt="img-login">
+                                </span>
+                                <h4 class="mt-5 text-white font-weight-bolder position-relative">"Ayo daftar sekarang !"</h4>
+                                <p class="text-white position-relative">Gabung sekarang dan cari kelas yang kamu inginkan sekarang juga</p>
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column mx-lg-0 mx-auto">
                             <div class="card card-plain">
                                 <div class="card pb-0 p-5 text-start">
                                     <div class="col">
-                                    <a href="<?= base_url() ?>">
-                                        <h2 class="ri-arrow-left-s-line"></h2>
-                                    </a>
+                                        <a href="<?= base_url() ?>">
+                                            <h2 class="ri-arrow-left-s-line"></h2>
+                                        </a>
                                         <h2 class="font-weight-bolder">Daftar</h2>
                                     </div>
                                     <p class="mb-0">Masukkan email dan password kamu yang valid</p>
                                     <!-- <div class="card-body"> -->
                                     <form role="form" class="form mt-4">
-                                        <div class="mb-3">
+                                        <div class="mb-2">
+                                            <label for="" class="form-label">Email</label>
                                             <input type="email" class="form-control form-control-lg" placeholder="Email" aria-label="Email" required>
                                         </div>
-                                        <div class="mb-3">
+                                        <div class="mb-2">
+                                        <label for="" class="form-label">Username</label>
                                             <input type="text" class="form-control form-control-lg" placeholder="Username" aria-label="Username" required>
                                         </div>
-                                        <div class="mb-3">
+                                        <div class="mb-2">
+                                        <label for="" class="form-label">Password</label>
                                             <input type="password" class="form-control form-control-lg" placeholder="Password" aria-label="Password" required>
                                         </div>
                                         <div class="justify-content-end">
@@ -76,14 +80,14 @@
                                         </div>
                                         <div class="text-center">
                                             <!-- <button type="submit" class="btn-green w-100 mt-4 mb-3">Login</button> -->
-                                            <a href="#" class="btn-green w-100 mt-4 mb-3">Login</a>
+                                            <a href="#" class="btn-green w-100 mt-4 mb-3">Daftar</a>
                                         </div>
                                     </form>
                                     <!-- </div> -->
                                     <div class="card-footer text-center pt-0 px-lg-2 px-1">
                                         <p class="mb-4 text-sm mx-auto">
-                                            Don't have an account?
-                                            <a href="javascript:;" class="text-primary text-gradient font-weight-bold">Sign up</a>
+                                            Sudah punya akun ?
+                                            <a href="<?= site_url('auth/login') ?>" class="text-primary text-gradient font-weight-bold">Login</a>
                                         </p>
                                     </div>
                                 </div>

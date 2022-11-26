@@ -7,7 +7,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="<?= base_url('assets/admin') ?>/img/apple-icon.png">
     <link rel="icon" type="image/png" href="<?= base_url('assets/admin') ?>/img/favicon.png">
     <title>
-        Argon Dashboard 2 by Creative Tim
+        <?= $title ?>
     </title>
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -43,14 +43,15 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 end-0 text-center justify-content-center flex-column">
-                            <div class="position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden bg-login" style="background-image: url('assets/img/auth/img-login.jpg'); background-size: cover;">
-                                <!-- <img src="<?= base_url('assets/img/auth/img-login.jpg') ?>" alt=""> -->
-                                <span class="mask bg-gradient-primary opacity-4"></span>
-                                <h4 class="mt-5 text-white font-weight-bolder position-relative">"Attention is the new currency"</h4>
-                                <p class="text-white position-relative">The more effortless the writing looks, the more effort the writer actually put into the process.</p>
+                            <div class="position-relative h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden bg-login" style="background-image: url('assets/img/auth/img-login.jpg'); background-size: cover;">
+                                <span class="mask bg-gradient-primary opacity-4">
+                                    <img class="img-fluid bg-cover" src="<?= base_url('assets/img/auth/img_login.jpg') ?>" alt="img-login">
+                                </span>
+                                <h4 class="mt-5 text-white font-weight-bolder position-relative">"Login dengan akun kamu"</h4>
+                                <p class="text-white position-relative">Dan temukan kelas yang kamu inginkan sekarang juga</p>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column mx-lg-0 mx-auto">
+                        <div class="col-xl-4 justify-content-center col-lg-5 col-md-7 d-flex flex-column mx-lg-0 mx-auto">
                             <div class="card card-plain">
                                 <div class="card pb-0 p-5 text-start">
                                     <div class="col">
@@ -63,13 +64,15 @@
                                     <!-- <div class="card-body"> -->
                                     <form role="form" class="form mt-4">
                                         <div class="mb-3">
+                                            <label for="" class="form-label">Email</label>
                                             <input type="email" class="form-control form-control-lg" placeholder="Email" aria-label="Email" required>
                                         </div>
                                         <div class="mb-3">
-                                            <input type="email" class="form-control form-control-lg" placeholder="Password" aria-label="Password" required>
+                                            <label for="" class=" form-label">Password</label>
+                                            <input type="password" class="form-control form-control-lg" placeholder="Password" aria-label="Password" required>
                                         </div>
                                         <div class="justify-content-end">
-                                            <a href="#" class="nav-link text-end">Lupa pasword?</a>
+                                            <a href="#" class="nav-link text-end">Lupa password?</a>
                                         </div>
                                         <div class="text-center">
                                             <!-- <button type="submit" class="btn-green w-100 mt-4 mb-3">Login</button> -->
@@ -79,8 +82,8 @@
                                     <!-- </div> -->
                                     <div class="card-footer text-center pt-0 px-lg-2 px-1">
                                         <p class="mb-4 text-sm mx-auto">
-                                            Don't have an account?
-                                            <a href="javascript:;" class="text-primary text-gradient font-weight-bold">Sign up</a>
+                                            Belum punya akun ?
+                                            <a href="<?= site_url('auth/daftar') ?>" class="text-primary text-gradient font-weight-bold">Daftar</a>
                                         </p>
                                     </div>
                                 </div>

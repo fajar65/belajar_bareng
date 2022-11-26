@@ -34,7 +34,7 @@ theme.
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
-/* @import url("https://fonts.googleapis.com/css?family=Poppins:400,400i,500|Rubik:500, 600"); */
+/* @import url("https://fonts.googleapis.com/css?family=Plus Jakarta Sans:400,400i,500|Rubik:500, 600"); */
 
 
 /*---------------------------------------------------- */
@@ -61,7 +61,7 @@ theme.
 body {
     line-height: 25px;
     font-size: 16px;
-    font-family: "Poppins", sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif;
     font-weight: 400;
     color: #7b838a;
 }
@@ -76,7 +76,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Poppins", sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif;
     font-weight: 700;
     color: var(--secondary-color);
 }
@@ -408,7 +408,7 @@ button:focus {
 }
 
 .header_area .navbar .nav .nav-item .nav-link {
-    font: 500 14px/80px "Poppins", sans-serif;
+    font: 500 14px/80px "Plus Jakarta Sans", sans-serif;
     text-transform: capitalize;
     color: var(--offwhite);
     padding: 0px;
@@ -4291,7 +4291,7 @@ h6 {
 
 .btn-gradient:hover {
     color: var(--secondary-color);
-    box-shadow: inset 100px -0px 0 0 var(--primary-color);
+    box-shadow: inset 1000px -0px 0 0 var(--primary-color);
 }
 
 .btn-gradient:active {
@@ -4300,6 +4300,38 @@ h6 {
 
 
 /* btn-green */
+
+button {
+    position: relative;
+    border: none;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    z-index: 1;
+}
+
+button::before,
+button::after {
+    position: absolute;
+    content: "";
+    z-index: -1;
+}
+
+.btn-green-2::after {
+    height: 100%;
+    left: -35%;
+    top: 0;
+    transform: skew(50deg);
+    transition-duration: 0.6s;
+    transform-origin: top left;
+    width: 0;
+}
+
+.btn-green-2:hover:after {
+    height: 100%;
+    width: 135%;
+}
 
 .btn-green {
     position: relative;
@@ -4316,7 +4348,7 @@ h6 {
     transition: ease-out 0.5s;
     border-radius: 100px;
     outline: none !important;
-    /* box-shadow: inset 0 0 0 0 #725AC1; */
+    box-shadow: inset 0 0 0 0 #725AC1;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
@@ -4420,9 +4452,9 @@ h6 {
 @media (max-width: 1619px) {
     /* Main Menu Area css
 	============================================================================================ */
-    .header_area .navbar .search {
+    /* .header_area .navbar .search {
         margin-left: 40px;
-    }
+    } */
     /* End Main Menu Area css
 	============================================================================================ */
 }
