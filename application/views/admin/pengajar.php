@@ -4,9 +4,14 @@
 
     <!-- End Navbar -->
     <div class="container-fluid py-2">
-        <a href="#" class="btn-gradient mb-3 mb-sm-4">
+        <a href="<?= site_url('admin/pengajar/add') ?>" class="btn-gradient mb-3 mb-sm-4">
             <i class="fa-solid fa-add me-2"></i> Tambah <?= $title ?>
         </a>
+        <?php if ($this->session->flashdata('success')) { ?>
+            <div class="alert alert-success"><?= $this->session->flashdata('success') ?></div>
+        <?php } elseif ($this->session->flashdata('error')) { ?>
+            <div class="alert alert-danger"><?= $this->session->flashdata('error') ?></div>
+        <?php } ?>
         <div class="row">
             <div class="col-12">
                 <div class="card mb-4">
@@ -34,10 +39,8 @@
                                         <tr>
                                             <td class="align-middle text-center"><?= $no++ ?></td>
                                             <td>
-                                                <div class="d-flex px-2 py-1">
-                                                    <div>
-                                                        <img src="<?= base_url('assets/admin') ?>/img/team-4.jpg" class="avatar avatar-lg me-3" alt="user1">
-                                                    </div>
+                                                <div class="px-2 py-1">
+                                                    <img class="avatar avatar-lg me-3" src="<?= base_url('assets/admin/uploads/pengajar/' . $pj->image) ?>" alt="user1">
                                                 </div>
                                             </td>
                                             <td class="text-start">
@@ -50,11 +53,11 @@
                                                 <span class="text-secondary"><?= character_limiter($pj->deskripsi, 20) ?></span>
                                             </td>
                                             <td class="align-middle">
-                                                <a href="#" class="btn btn-group-sm btn-warning text-xs">
+                                                <a href="<?= site_url('admin/pengajar/edit/'.$pj->id_pengajar) ?>" class="btn btn-group-sm btn-warning text-xs">
                                                     <i class="fa-solid fa-pencil text-xs"></i>
                                                     <span class="ms-1">Edit</span>
                                                 </a>
-                                                <a href="#" class="btn btn-group-sm btn-danger text-xs">
+                                                <a href="<?= site_url('admin/pengajar/hapus/'.$pj->id_pengajar) ?>" class="btn btn-group-sm btn-danger text-xs" onclick="return confirm ('Apakah Anda Yakin Ingin Hapus Data ini ?')">
                                                     <i class="fa-solid fa-trash"></i>
                                                     <span class="ms-1">Hapus</span>
                                                 </a>
@@ -69,3 +72,4 @@
             </div>
         </div>
     </div>
+    

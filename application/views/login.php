@@ -54,29 +54,39 @@
                         <div class="col-xl-4 justify-content-center col-lg-5 col-md-7 d-flex flex-column mx-lg-0 mx-auto">
                             <div class="card card-plain">
                                 <div class="card pb-0 p-5 text-start">
+                                    <?php if ($this->session->flashdata('success')) { ?>
+                                        <div class="alert alert-success text-light"><?= $this->session->flashdata('success') ?></div>
+                                    <?php } elseif ($this->session->flashdata('error')) { ?>
+                                        <div class="alert alert-danger text-light"><?= $this->session->flashdata('error') ?></div>
+                                    <?php } ?>
                                     <div class="col">
-                                    <a href="<?= base_url() ?>">
-                                        <h2 class="ri-arrow-left-s-line"></h2>
-                                    </a>
+                                        <a href="<?= base_url() ?>">
+                                            <h2 class="ri-arrow-left-s-line"></h2>
+                                        </a>
                                         <h2 class="font-weight-bolder">Login</h2>
                                     </div>
                                     <p class="mb-0">Masukkan email dan password kamu yang valid</p>
                                     <!-- <div class="card-body"> -->
-                                    <form role="form" class="form mt-4">
+                                    <form role="form" class="form mt-4" action="<?= base_url('auth/ceklogin') ?>" method="POST">
                                         <div class="mb-3">
                                             <label for="" class="form-label">Email</label>
-                                            <input type="email" class="form-control form-control-lg" placeholder="Email" aria-label="Email" required>
+                                            <input type="email" name="email" class="form-control form-control-lg" placeholder="Email" aria-label="Email" required>
                                         </div>
                                         <div class="mb-3">
                                             <label for="" class=" form-label">Password</label>
-                                            <input type="password" class="form-control form-control-lg" placeholder="Password" aria-label="Password" required>
+                                            <input type="password" name="password" class="form-control form-control-lg" placeholder="Password" aria-label="Password" required>
                                         </div>
                                         <div class="justify-content-end">
                                             <a href="#" class="nav-link text-end">Lupa password?</a>
                                         </div>
                                         <div class="text-center">
                                             <!-- <button type="submit" class="btn-green w-100 mt-4 mb-3">Login</button> -->
-                                            <a href="#" class="btn-green w-100 mt-4 mb-3">Login</a>
+                                            <button type="submit" class="btn-green w-100 mt-4 mb-2" name="login">Login</button>
+                                        </div>
+                                        <div class="text-center row row-cols-2 btn-green-outline w-100 text-center mb-4">
+                                            <i class="ri-google-fill text-lg-center text-dark"></i>
+                                            <!-- <img class="text" src="<?= base_url('assets/img/auth/google.png') ?>" height="24" width="24" alt="logo-google" srcset=""> -->
+                                            <a href="#" class="text-center">Login with Google</a>
                                         </div>
                                     </form>
                                     <!-- </div> -->

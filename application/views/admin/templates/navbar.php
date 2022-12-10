@@ -17,7 +17,7 @@
                         <li class="nav-item d-flex align-items-center">
                             <a href="javascript:;" class="nav-link text-white font-weight-bold px-0">
                                 <i class="fa-solid fa-user text-lg me-sm-1"></i>
-                                <span class="d-sm-inline d-none"><?= $this->session->userdata('username') ?></span>
+                                <span class="d-sm-inline d-none"><?= $this->session->userdata('username_admin') ?></span>
                             </a>
                         </li>
                         <li class="nav-item d-flex mx-3"> 

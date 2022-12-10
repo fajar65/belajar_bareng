@@ -54,6 +54,11 @@
                         <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column mx-lg-0 mx-auto">
                             <div class="card card-plain">
                                 <div class="card pb-0 p-5 text-start">
+                                    <?php if ($this->session->flashdata('success')) { ?>
+                                        <div class="alert alert-success text-light"><?= $this->session->flashdata('success') ?></div>
+                                    <?php } elseif ($this->session->flashdata('error')) { ?>
+                                        <div class="alert alert-danger text-light"><?= $this->session->flashdata('error') ?></div>
+                                    <?php } ?>
                                     <div class="col">
                                         <a href="<?= base_url() ?>">
                                             <h2 class="ri-arrow-left-s-line"></h2>
@@ -62,32 +67,35 @@
                                     </div>
                                     <p class="mb-0">Masukkan email dan password kamu yang valid</p>
                                     <!-- <div class="card-body"> -->
-                                    <form role="form" class="form mt-4">
+                                    <form role="form" class="form mt-4" action="<?= base_url('auth/register') ?>" method="POST">
+                                        <!-- <div class="mb-2">
+                                            <label for="" class="form-label">Nama Lengkap</label>
+                                            <input type="nama_user" name="text" class="form-control form-control-lg" placeholder="Nama lengkap" aria-label="Nama User" required>
+                                        </div> -->
                                         <div class="mb-2">
                                             <label for="" class="form-label">Email</label>
-                                            <input type="email" class="form-control form-control-lg" placeholder="Email" aria-label="Email" required>
+                                            <input type="email" name="email" class="form-control form-control-lg" placeholder="Email" aria-label="Email" required>
                                         </div>
                                         <div class="mb-2">
-                                        <label for="" class="form-label">Username</label>
-                                            <input type="text" class="form-control form-control-lg" placeholder="Username" aria-label="Username" required>
+                                            <label for="" class="form-label">Username</label>
+                                            <input type="text" name="username" class="form-control form-control-lg" placeholder="Username" aria-label="Username" required>
                                         </div>
                                         <div class="mb-2">
-                                        <label for="" class="form-label">Password</label>
-                                            <input type="password" class="form-control form-control-lg" placeholder="Password" aria-label="Password" required>
+                                            <label for="" class="form-label">Password</label>
+                                            <input type="password" name="password" class="form-control form-control-lg" placeholder="Password" aria-label="Password" required>
                                         </div>
                                         <div class="justify-content-end">
                                             <a href="#" class="nav-link text-end">Lupa pasword?</a>
                                         </div>
                                         <div class="text-center">
-                                            <!-- <button type="submit" class="btn-green w-100 mt-4 mb-3">Login</button> -->
-                                            <a href="#" class="btn-green w-100 mt-4 mb-3">Daftar</a>
+                                            <button type="submit" class="btn-green w-100 mt-4 mb-3">Daftar</button>
                                         </div>
                                     </form>
                                     <!-- </div> -->
                                     <div class="card-footer text-center pt-0 px-lg-2 px-1">
                                         <p class="mb-4 text-sm mx-auto">
                                             Sudah punya akun ?
-                                            <a href="<?= site_url('auth/login') ?>" class="text-primary text-gradient font-weight-bold">Login</a>
+                                            <a href="<?= site_url('auth') ?>" class="text-primary text-gradient font-weight-bold">Login</a>
                                         </p>
                                     </div>
                                 </div>

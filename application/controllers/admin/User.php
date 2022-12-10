@@ -18,8 +18,8 @@ class User extends CI_Controller
         $data['view'] = ('admin/user');
         $data['title'] = 'User';
         $this->db->select('*');
-        $this->db->from('user');
-        $this->db->order_by('user.id_user', 'DESC');
+        $this->db->from('users');
+        $this->db->order_by('users.id_user', 'DESC');
         $data['user'] = $this->db->get()->result();
         $this->load->view('admin/templates/main', $data);
     }

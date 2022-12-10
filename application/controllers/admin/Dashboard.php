@@ -29,7 +29,7 @@ class Dashboard extends CI_Controller {
 	}
 
 	public function count_users(){
-		$sql = "SELECT COUNT(id_user) as id_user FROM user";
+		$sql = "SELECT COUNT(id_user) as id_user FROM users";
 		$result = $this->db->query($sql);
 		return $result->row()->id_user;
 	}

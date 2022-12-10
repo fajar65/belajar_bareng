@@ -31,7 +31,21 @@ class SuperModel extends CI_Model
         $this->db->order_by($table1 . '.id', 'DESC');
         return $this->db->get();
     }
-
+    // edit
+    public function edit_data($where, $table)
+    {
+        // $this->db->select('id_pengajar, nama_pengajar, image, pengajar.deskripsi AS deskripsi, kelas.nama_kelas');
+        // $this->db->from('pengajar');
+        // $this->db->join('kelas', 'kelas.id_kelas = pengajar.id_kelas');
+        // $query = $this->db->get();
+        return $this->db->get_where($table, $where);
+    }
+    // update
+    public function update_data($table, $data, $where)
+    {
+        return $this->db->update($table, $data, $where);
+    }
+    
     public function update($table, $data, $where)
     {
         return $this->db->update($table, $data, $where);

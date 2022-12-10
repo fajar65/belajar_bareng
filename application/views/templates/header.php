@@ -22,6 +22,10 @@
 
     <link rel="stylesheet" href="<?= base_url('assets/') ?>vendors/owl-carousel/owl.carousel.min.css" />
     <link rel="stylesheet" href="<?= base_url('assets/') ?>vendors/nice-select/css/nice-select.css" />
+    <link rel="stylesheet" href="<?= base_url('assets/') ?>vendors/swiper/css/swiper-bundle.min.css" />
+
+    <!-- <link id="pagestyle" href="<?= base_url() ?>assets/admin/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" /> -->
+
     <!-- main css -->
     <link rel="stylesheet" href="<?= base_url('assets/') ?>css/style.css" />
 </head>

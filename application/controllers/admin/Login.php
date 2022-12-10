@@ -23,7 +23,7 @@ class Login extends CI_Controller
         $this->form_validation->set_rules('password', 'Password', 'required');
 
         $cekData = array(
-            'username' => htmlspecialchars(htmlentities(stripslashes($this->input->post('username')))),
+            'username_admin' => htmlspecialchars(htmlentities(stripslashes($this->input->post('username')))),
             'password' => htmlspecialchars(htmlentities(stripcslashes(md5($this->input->post('password'))))),
         );
 
@@ -38,7 +38,7 @@ class Login extends CI_Controller
                 $session = array(
                     'login' => 1,
                     'id_admin' => $cekLogin->row_array()['id_admin'],
-                    'username' => $cekLogin->row_array()['username'],
+                    'username_admin' => $cekLogin->row_array()['username_admin'],
                     'level' => $cekLogin->row_array()['level'],
                 );
                 $this->session->set_userdata($session);
@@ -51,7 +51,7 @@ class Login extends CI_Controller
     }
 
     public function logout(){
-		$this->session->set_userdata('username', FALSE);
+		$this->session->set_userdata('username_admin', FALSE);
         $this->session->sess_destroy();
 		$this->session->set_flashdata('success', 'Anda telah logout');
         redirect(site_url('admin/login'));
