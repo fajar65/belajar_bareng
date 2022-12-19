@@ -87,6 +87,7 @@ class Pengajar extends CI_Controller
     public function edit($id)
     {
         $where = array('id_pengajar' => $id);
+        $data['kelas'] = $this->ModelKelas->joinKategoriKelas()->result();
         $data['pengajar'] = $this->SuperModel->edit_data($where, 'pengajar')->result();
         $data['pengajar2'] = $this->ModelPengajar->pengajarTerbaru()->result();
         $data['title'] = 'Edit Pengajar';

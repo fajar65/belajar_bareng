@@ -84,9 +84,9 @@
                                             <label for="" class="form-label">Password</label>
                                             <input type="password" name="password" class="form-control form-control-lg" placeholder="Password" aria-label="Password" required>
                                         </div>
-                                        <div class="justify-content-end">
+                                        <!-- <div class="justify-content-end">
                                             <a href="#" class="nav-link text-end">Lupa pasword?</a>
-                                        </div>
+                                        </div> -->
                                         <div class="text-center">
                                             <button type="submit" class="btn-green w-100 mt-4 mb-3">Daftar</button>
                                         </div>

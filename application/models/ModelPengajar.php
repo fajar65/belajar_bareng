@@ -13,7 +13,7 @@ class ModelPengajar extends CI_Model
 
     public function pengajarTerbaru()
     {
-        $this->db->select('id_pengajar, nama_pengajar, image, pengajar.deskripsi AS deskripsi, kelas.nama_kelas, kelas.id_kelas');
+        $this->db->select('pengajar.id_pengajar, nama_pengajar, image, pengajar.deskripsi AS deskripsi, kelas.nama_kelas, kelas.id_kelas');
         $this->db->from('pengajar');
         $this->db->join('kelas', 'kelas.id_kelas = pengajar.id_kelas');
         $query = $this->db->get();

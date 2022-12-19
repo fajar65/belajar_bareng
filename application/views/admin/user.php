@@ -16,9 +16,9 @@
                                 <thead>
                                     <tr>
                                         <th class="text-dark text-center">No</th>
-                                        <th class="text-dark">Foto</th>
+                                        <!-- <th class="text-dark">Foto</th> -->
                                         <th class="text-dark">Username / Email</th>
-                                        <th class="text-dark">Nama</th>
+                                        <!-- <th class="text-dark">Nama</th> -->
                                         <th class="text-dark">Created at</th>
                                         <th class="text-dark">Aksi</th>
                                     </tr>
@@ -30,20 +30,20 @@
                                     ?>
                                         <tr>
                                             <td class="align-middle text-center"><?= $no++ ?></td>
-                                            <td>
+                                            <!-- <td>
                                                 <div class="d-flex px-2 py-1">
                                                     <div>
                                                         <img src="<?= base_url('assets/admin') ?>/img/team-3.jpg" class="avatar avatar-lg me-2" alt="user1">
                                                     </div>
                                                 </div>
-                                            </td>
+                                            </td> -->
                                             <td class="text-start">
                                                 <div class="d-flex flex-column justify-content-center">
                                                     <h4 class="mb-0 text-lg"><?= $us->username ?></h4>
                                                     <p class="text-sm text-secondary mb-0"><?= $us->email ?></p>
                                                 </div>
                                             </td>
-                                            <td class="text-start"><?= $us->nama_user ?></td>
+                                            <!-- <td class="text-start"><?= $us->nama_user ?></td> -->
                                             <td class="align-middle text-start text-sm">
                                                 <span class="text-secondary"><?= date('d - m - Y, H:i', strtotime($us->created_at)) ?></span>
                                             </td>

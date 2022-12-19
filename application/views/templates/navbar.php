@@ -70,9 +70,9 @@
                             <span class="d-sm-inline d-none text-light ">Hi, <?= $this->session->userdata('username') ?></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="course-details.html">Profile</a>
-                            </li>
+                            </li> -->
                             <li class="nav-item">
                                 <a class="nav-link" href="<?= base_url('auth/logout') ?>" onclick="return confirm('Yakin ingin logout?')">Logout</a>
                             </li>

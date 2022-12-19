@@ -83,7 +83,7 @@
                                                             5.0
                                                         </a>
                                                     </span>
-                                                    <span class="meta_info"><a href="#"> Terjual 35 </a></span>
+                                                    <!-- <span class="meta_info"><a href="#"> Terjual 35 </a></span> -->
                                                 </div>
                                             </div>
                                     </div>

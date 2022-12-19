@@ -42,7 +42,7 @@
                     <li><a href="#">support@belajarbareng.co.id</a></li>
                     <li><a href="#">+62 8111 222 333</a></li>
                 </ul>
-                <div class="form-wrap" id="mc_embed_signup">
+                <!-- <div class="form-wrap" id="mc_embed_signup">
                     <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
                         <input class="form-control" name="EMAIL" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address'" required="" type="email" />
                         <button class="click-btn btn btn-default">
@@ -54,7 +54,7 @@
 
                         <div class="info"></div>
                     </form>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="row footer-bottom d-flex justify-content-between">
@@ -66,7 +66,7 @@
             <div class="col-lg-4 col-sm-12 footer-social align-items-center align-content-center">
                 <a href="#"><i class="ti-facebook"></i></a>
                 <a href="#"><i class="ti-twitter"></i></a>
-                <a href="#"><i class="ti-dribbble"></i></a>
+                <a href="#"><i class="ti-instagram"></i></a>
                 <a href="#"><i class="ti-linkedin"></i></a>
             </div>
         </div>

@@ -81,13 +81,12 @@
                                         </div>
                                         <div class="text-center">
                                             <!-- <button type="submit" class="btn-green w-100 mt-4 mb-3">Login</button> -->
-                                            <button type="submit" class="btn-green w-100 mt-4 mb-2" name="login">Login</button>
+                                            <button type="submit" class="btn-green w-100 mt-4 mb-3" name="login">Login</button>
                                         </div>
-                                        <div class="text-center row row-cols-2 btn-green-outline w-100 text-center mb-4">
+                                        <!-- <div class="text-center row row-cols-2 btn-green-outline w-100 text-center mb-4">
                                             <i class="ri-google-fill text-lg-center text-dark"></i>
-                                            <!-- <img class="text" src="<?= base_url('assets/img/auth/google.png') ?>" height="24" width="24" alt="logo-google" srcset=""> -->
                                             <a href="#" class="text-center">Login with Google</a>
-                                        </div>
+                                        </div> -->
                                     </form>
                                     <!-- </div> -->
                                     <div class="card-footer text-center pt-0 px-lg-2 px-1">

@@ -28,4 +28,15 @@ class Payment extends CI_Controller
 	private function tampilKelas(){
 		return $this->db->get('kelas');
     }
+
+    // detail_kelas kelas
+	public function paymentKelas($id_kelas){
+		$where = array ('id_kelas' => $id_kelas);
+        $data['title'] = 'Bayar Kelas';
+        $data['kelas'] = $this->ModelKelas->joinKategoriKelas()->result();
+		$data['detailKelas'] = $this->ModelKelas->tampil_data($where,'kelas')->result();
+		$data['kategori'] = $this->ModelKategori->getKategori()->result();
+		$data['view'] = 'payment';
+		$this->load->view('templates/main',$data);	
+	}
 }

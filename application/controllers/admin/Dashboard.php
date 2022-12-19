@@ -19,6 +19,7 @@ class Dashboard extends CI_Controller {
 		$data['title'] = 'Dashboard';
 		$data['count_harga'] = $this->count_harga_kelas();
 		$data['count_users'] = $this->count_users();
+		$data['count_pengajar'] = $this->count_pengajar();
 		$this->load->view('admin/templates/main', $data);
 	}
 
@@ -32,5 +33,11 @@ class Dashboard extends CI_Controller {
 		$sql = "SELECT COUNT(id_user) as id_user FROM users";
 		$result = $this->db->query($sql);
 		return $result->row()->id_user;
+	}
+
+	public function count_pengajar(){
+		$sql = "SELECT COUNT(id_pengajar) as id_pengajar FROM pengajar";
+		$result = $this->db->query($sql);
+		return $result->row()->id_pengajar;
 	}
 }

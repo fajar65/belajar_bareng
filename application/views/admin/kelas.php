@@ -21,7 +21,7 @@
                                 <thead>
                                     <tr>
                                         <th class="text-dark text-center">No</th>
-                                        <th class="text-dark">Gambar</th>
+                                        <!-- <th class="text-dark">Gambar</th> -->
                                         <th class="text-dark">Judul</th>
                                         <th class="text-dark">Harga</th>
                                         <th class="text-dark">Kategori</th>
@@ -38,13 +38,13 @@
                                             <td class="align-middle text-center">
                                                 <?= $no++; ?>
                                             </td>
-                                            <td class="align-middle text-center">
+                                            <!-- <td class="align-middle text-center">
                                                 <div class="d-flex px-2 py-1">
                                                     <div>
-                                                        <img src="<?= base_url('assets/admin') ?>/img/team-3.jpg" class="img-thumbnail avatar-xxl me-3 bg-cover" alt="img-thumbnail">
+                                                        <img src="<?= base_url('assets/admin/uploads/pengajar/' . $pj->image) ?>" class="img-thumbnail avatar-xxl me-3 bg-cover" alt="img-thumbnail">
                                                     </div>
                                                 </div>
-                                            </td>
+                                            </td> -->
                                             <td>
                                                 <span><?= character_limiter($kls->nama_kelas, 18) ?></span>
                                             </td>

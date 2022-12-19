@@ -297,6 +297,7 @@ span.logo-gradient {
     overflow: hidden;
     object-fit: cover;
     object-position: top;
+    border: solid 2px var(--primary-color);
 }
 
 .content-team {
@@ -5192,9 +5193,9 @@ button::after {
 }
 
 .footer-area .single-footer-widget .click-btn {
-    background: #fdc632;
+    background: var(--primary-color);
     background-size: 200% auto;
-    color: #002347;
+    color: var(--secondary-color);
     border-radius: 0;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;

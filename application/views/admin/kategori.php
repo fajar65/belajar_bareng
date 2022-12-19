@@ -4,9 +4,14 @@
 
     <!-- End Navbar -->
     <div class="container-fluid py-2">
-        <a href="#" class="btn-gradient mb-3 mb-sm-4">
+        <a href="<?= site_url('admin/kategori/add') ?>" class="btn-gradient mb-3 mb-sm-4">
             <i class="fa-solid fa-add me-2"></i> Tambah <?= $title ?>
         </a>
+        <?php if ($this->session->flashdata('success')) { ?>
+            <div class="alert alert-success"><?= $this->session->flashdata('success') ?></div>
+        <?php } elseif ($this->session->flashdata('error')) { ?>
+            <div class="alert alert-danger"><?= $this->session->flashdata('error') ?></div>
+        <?php } ?>
         <div class="row">
             <div class="col-12">
                 <div class="card mb-4">
@@ -42,7 +47,8 @@
                                                     <i class="fa-solid fa-pencil text-xs"></i>
                                                     <span class="ms-1">Edit</span>
                                                 </a>
-                                                <a href="#" class="btn btn-group-sm btn-danger text-xs">
+                                                <a href="<?= site_url('admin/kategori/hapus/'.$kt->id_kategori) ?>" onclick="return confirm('Yakin ingin hapus kategori ?')" class="btn btn-group-sm btn-danger text-xs">
+                                                <!-- <a href="" class="btn btn-group-sm btn-danger text-xs"> -->
                                                     <i class="fa-solid fa-trash"></i>
                                                     <span class="ms-1">Hapus</span>
                                                 </a>

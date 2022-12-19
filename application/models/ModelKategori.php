@@ -17,4 +17,13 @@ class ModelKategori extends CI_Model{
         $query = $this->db->get();
         return $query;
 	}
+
+    public function kategoriTerbaru()
+    {
+        $this->db->select('kategori.id_kategori, nama_kategori, kategori.deskripsi AS deskripsi');
+        $this->db->from('kategori');
+        // $this->db->join('kelas', 'kelas.id_kelas = kategori.id_kelas');
+        $query = $this->db->get();
+        return $query;
+    }
 }

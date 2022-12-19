@@ -25,67 +25,6 @@ class Auth extends CI_Controller
         };
     }
 
-    // public function login()
-    // {
-    //     $email = $this->input->post('email');
-    //     $password = $this->input->post('password');
-
-    //     $validasi_email = $this->ModelUser->query_validasi_email($email);
-    //     if ($validasi_email->num_rows() > 0) {
-    //         $validate_ps = $this->ModelUser->query_validasi_password($email, $password);
-    //         if ($validate_ps->num_rows() > 0) {
-    //             $x = $validate_ps->row_array();
-    //             if ($x['is_active'] == '1') {
-    //                 $this->session->set_userdata('logged', TRUE);
-    //                 $this->session->set_userdata('user', $email);
-    //                 $id = $x['id_user'];
-    //                 if ($x['role_id'] == '1') { //Administrator
-    //                     $name = $x['email'];
-    //                     $this->session->set_userdata('access', 'Administrator');
-    //                     $this->session->set_userdata('id', $id);
-    //                     $this->session->set_userdata('name', $name);
-    //                     redirect('home');
-    //                 } else if ($x['role_id'] == '2') { //User
-    //                     $name = $x['email'];
-    //                     $this->session->set_userdata('access', 'User');
-    //                     $this->session->set_userdata('id', $id);
-    //                     $this->session->set_userdata('name', $name);
-    //                     redirect('home');
-    //                 } else if ($x['role_id'] == '3') { //Mahasiswa
-    //                     $name = $x['email'];
-    //                     $this->session->set_userdata('access', 'Mahasiswa');
-    //                     $this->session->set_userdata('id', $id);
-    //                     $this->session->set_userdata('name', $name);
-    //                     redirect('home');
-    //                 }
-    //                 else if ($x['role_id'] == '0') {
-    //                     $name = $x['email'];
-    //                     $this->session->set_userdata('access', 'done'); 
-    //                     $this->load->view('home');
-    //                 }
-    //             } else {
-    //                 $url = base_url('login');
-    //                 echo $this->session->set_flashdata('msg', '<span onclick="this.parentElement.style.display=`none`" class="w3-button w3-large w3-display-topright">&times;</span>
-    //                 <h3>Uupps!</h3>
-    //                 <p>Akun kamu telah di blokir. Silahkan hubungi admin.</p>');
-    //                 redirect($url);
-    //             }
-    //         } else {
-    //             $url = base_url('login');
-    //             echo $this->session->set_flashdata('msg', '<span onclick="this.parentElement.style.display=`none`" class="w3-button w3-large w3-display-topright">&times;</span>
-    //                 <h3>Uupps!</h3>
-    //                 <p>Password yang kamu masukan salah.</p>');
-    //             redirect($url);
-    //         }
-    //     } else {
-    //         $url = base_url('login');
-    //         echo $this->session->set_flashdata('msg', '<span onclick="this.parentElement.style.display=`none`" class="w3-button w3-large w3-display-topright">&times;</span>
-    //         <h3>Uupps!</h3>
-    //         <p>Email yang kamu masukan salah.</p>');
-    //         redirect($url);
-    //     }
-    // }
-
     public function ceklogin()
     {
         $this->form_validation->set_rules('email', 'Email', 'required');

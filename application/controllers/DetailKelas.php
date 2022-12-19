@@ -9,10 +9,10 @@ class DetailKelas extends CI_Controller
         $this->load->model('SuperModel');
         $this->load->model('ModelKelas');
         $this->load->model('ModelKategori');
-        if ($this->session->userdata('login') != 2) {
-            $this->session->set_flashdata('error', 'Anda Harus Login Terlebih Dahulu!');
-            redirect(site_url('auth'));
-        }
+        // if ($this->session->userdata('login') != 2) {
+        //     $this->session->set_flashdata('error', 'Anda Harus Login Terlebih Dahulu!');
+        //     redirect(site_url('auth'));
+        // }
     }
     public function index()
     {

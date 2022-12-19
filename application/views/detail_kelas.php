@@ -18,7 +18,7 @@
                                     5.0
                                 </a>
                             </span>
-                            <span class="meta_info"><a href="#"> Terjual 35 </a></span>
+                            <!-- <span class="meta_info"><a href="#"> Terjual 35 </a></span> -->
                         </div>
                     </div>
                     <div class="main_image">
@@ -61,7 +61,7 @@
 
 
                 <div class="col-lg-4 right-contents">
-                    <div class="single_course rounded mb-4" style="border-radius: 20px;">
+                    <div class="single_course rounded mb-4 sticky-top" style="border-radius: 20px;">
                         <div class="course_head rounded radius1 mt-3">
                             <img class="img-fluid rounded radius1" src="<?= base_url('assets/') ?>img/courses/thumbnail-ui-ux.jpg" alt="" />
                         </div>
@@ -75,135 +75,13 @@
                                 <?= $kl->nama_kelas ?>
                             </h5>
                             <p class="mb-3 desc"><?= character_limiter($kl->deskripsi, 100) ?></p>
-                            <h4 class="text-bold text-bolder text-purple price-class">
+                            <h4 class="text-bold text-bolder text-purple price-class mb-4">
                                 Rp. <?= number_format($kl->harga_kelas, 0, '', '.') ?>
                             </h4>
+                            <a href="<?= site_url('payment/paymentKelas/'. $kl->id_kelas) ?>" class="btn btn-green w-100">Beli Kelas</a>
                         </div>
                     </div>
-                    <a href="#" class="primary-btn2 text-uppercase enroll rounded-0 text-white">Enroll the course</a>
-
-                    <h4 class="title">Reviews</h4>
-                    <div class="content">
-                        <div class="review-top row pt-40">
-                            <div class="col-lg-12">
-                                <h6 class="mb-15">Provide Your Rating</h6>
-                                <div class="d-flex flex-row reviews justify-content-between">
-                                    <span>Quality</span>
-                                    <div class="star">
-                                        <i class="ti-star checked"></i>
-                                        <i class="ti-star checked"></i>
-                                        <i class="ti-star checked"></i>
-                                        <i class="ti-star"></i>
-                                        <i class="ti-star"></i>
-                                    </div>
-                                    <span>Outstanding</span>
-                                </div>
-                                <div class="d-flex flex-row reviews justify-content-between">
-                                    <span>Puncuality</span>
-                                    <div class="star">
-                                        <i class="ti-star checked"></i>
-                                        <i class="ti-star checked"></i>
-                                        <i class="ti-star checked"></i>
-                                        <i class="ti-star"></i>
-                                        <i class="ti-star"></i>
-                                    </div>
-                                    <span>Outstanding</span>
-                                </div>
-                                <div class="d-flex flex-row reviews justify-content-between">
-                                    <span>Quality</span>
-                                    <div class="star">
-                                        <i class="ti-star checked"></i>
-                                        <i class="ti-star checked"></i>
-                                        <i class="ti-star checked"></i>
-                                        <i class="ti-star"></i>
-                                        <i class="ti-star"></i>
-                                    </div>
-                                    <span>Outstanding</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feedeback">
-                            <h6>Your Feedback</h6>
-                            <textarea name="feedback" class="form-control" cols="10" rows="10"></textarea>
-                            <div class="mt-10 text-right">
-                                <a href="#" class="primary-btn2 text-right rounded-0 text-white">Submit</a>
-                            </div>
-                        </div>
-                        <div class="comments-area mb-30">
-                            <div class="comment-list">
-                                <div class="single-comment single-reviews justify-content-between d-flex">
-                                    <div class="user justify-content-between d-flex">
-                                        <div class="thumb">
-                                            <img src="img/blog/c1.jpg" alt="">
-                                        </div>
-                                        <div class="desc">
-                                            <h5><a href="#">Emilly Blunt</a>
-                                                <div class="star">
-                                                    <span class="ti-star checked"></span>
-                                                    <span class="ti-star checked"></span>
-                                                    <span class="ti-star checked"></span>
-                                                    <span class="ti-star"></span>
-                                                    <span class="ti-star"></span>
-                                                </div>
-                                            </h5>
-                                            <p class="comment">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                                eiusmod tempor incididunt ut labore et dolore.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="comment-list">
-                                <div class="single-comment single-reviews justify-content-between d-flex">
-                                    <div class="user justify-content-between d-flex">
-                                        <div class="thumb">
-                                            <img src="img/blog/c2.jpg" alt="">
-                                        </div>
-                                        <div class="desc">
-                                            <h5><a href="#">Elsie Cunningham</a>
-                                                <div class="star">
-                                                    <span class="ti-star checked"></span>
-                                                    <span class="ti-star checked"></span>
-                                                    <span class="ti-star checked"></span>
-                                                    <span class="ti-star"></span>
-                                                    <span class="ti-star"></span>
-                                                </div>
-                                            </h5>
-                                            <p class="comment">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                                eiusmod tempor incididunt ut labore et dolore.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="comment-list">
-                                <div class="single-comment single-reviews justify-content-between d-flex">
-                                    <div class="user justify-content-between d-flex">
-                                        <div class="thumb">
-                                            <img src="img/blog/c3.jpg" alt="">
-                                        </div>
-                                        <div class="desc">
-                                            <h5><a href="#">Maria Luna</a>
-                                                <div class="star">
-                                                    <span class="ti-star checked"></span>
-                                                    <span class="ti-star checked"></span>
-                                                    <span class="ti-star checked"></span>
-                                                    <span class="ti-star"></span>
-                                                    <span class="ti-star"></span>
-                                                </div>
-                                            </h5>
-                                            <p class="comment">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                                eiusmod tempor incididunt ut labore et dolore.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- <a href="#" class="primary-btn2 text-uppercase enroll rounded-0 text-dark">Enroll the course</a> -->
                 </div>
             </div>
         </div>
